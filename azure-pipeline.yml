@@ -4,23 +4,23 @@ resources:
     type: github
     endpoint: MyGitHubServiceConnection
     name: kalsor/nginx_test1
-4trigger:
+
+pool:
+  name: 'ubuntu-latest'
+trigger:
 - main
 
 stages: 
 - stage: stage1
   jobs:
   - job: job1
-    pool:
-      vmImage: 'ubuntu-latest'
     steps:
-    - script: ""
+    - script: "hostname"
       displayName: 'Run a one-line script'
 
 - stage: stage2
   jobs:
   - job: importantjob
-    pool:
-      vmImage: 'windows-latest'
     steps:
-      - pwsh: 'write-output "I do nothing"'
+      - script: "hostname"
+        displayName: "Run 2"
