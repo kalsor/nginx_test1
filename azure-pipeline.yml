@@ -4,8 +4,7 @@ resources:
     type: github
     endpoint: MyGitHubServiceConnection
     name: kalsor/nginx_test1
-
-trigger:
+4trigger:
 - main
 
 stages: 
