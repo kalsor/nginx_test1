@@ -15,5 +15,5 @@ stages:
     steps:
     - script: "hostname"
       displayName: 'Run a one-line script'
-    steps:
     - script: "docker ps"
+      displayName: "Run2"
