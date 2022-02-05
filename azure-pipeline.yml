@@ -15,10 +15,5 @@ stages:
     steps:
     - script: "hostname"
       displayName: 'Run a one-line script'
-
-- stage: stage2
-  jobs:
-  - job: importantjob
     steps:
-    - script: "hostname"
-      displayName: "Run 2"
+    - script: "docker ps"
