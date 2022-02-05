@@ -8,9 +8,7 @@ resources:
 trigger:
 - main
 
-stages: 
-- stage: stage1
-  jobs:
+jobs:
   - job: job1
     steps:
     - script: "hostname"
